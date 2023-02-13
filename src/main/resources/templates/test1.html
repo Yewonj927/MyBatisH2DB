@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thtmeleaf/layout"
+layout:decorate="~{layout/basic.html}">
+
+<div layout:fragment="content">
+<h1>test1</h1>
+<ul th:each="aa : ${ddd}">
+<li>[[${aa.num}]][[${aa.writer}]]</li>
+</ul>
+</div>
+
+<script layout:fragment="script" th:inline="javascript">
+console.log("script.....................");
+</script>
